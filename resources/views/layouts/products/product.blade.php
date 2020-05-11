@@ -18,7 +18,7 @@
                     <h6>Aktualny stan: @if (isset($product->stock->id)){{ $product->stock->quantity }} @else 0 @endif</h6>
                     <hr>
                     @if (isset($product->price->id) && isset($product->stock->id))
-                        <a href="btn btn-suc cess" class="btn btn-success">Dodaj produkt do koszyka</a>
+                        <a href="/add-to-cart/{{ $product->id }}" class="btn btn-success">Dodaj produkt do koszyka</a>
                     @else
                         <a href="#" class="btn btn-danger">Produkt chwilowo niedostępny</a>
                     @endif

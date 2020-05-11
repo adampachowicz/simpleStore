@@ -13,3 +13,7 @@
 
 Route::get('/', 'ProductController@index');
 Route::get('/product/{id}', 'ProductController@show');
+Route::get('/add-to-cart/{id}', 'OrdersController@getAddToCart');
+Route::get('/shopping-cart', 'OrdersController@getCart');
+Route::get('/reduce-one/{id}', 'OrdersController@reduceOne');
+Route::get('/reduce-all/{id}', 'OrdersController@reduceAll');

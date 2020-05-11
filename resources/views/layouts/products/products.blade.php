@@ -16,7 +16,7 @@
                         <a href="/product/{{ $product->id }}" class="btn btn-primary">Pokaż produkt</a>
                         <hr>
                             @if (isset($product->price->id) && isset($product->stock->id))
-                            <a href="btn btn-suc cess" class="btn btn-success">Dodaj produkt do koszyka</a>
+                            <a href="/add-to-cart/{{ $product->id }}" class="btn btn-success">Dodaj produkt do koszyka</a>
                                 @else
                                 <a href="#" class="btn btn-danger">Produkt chwilowo niedostępny</a>
                             @endif

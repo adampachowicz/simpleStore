@@ -15,6 +15,10 @@
             <a class="navbar-brand" href="/">
                 Simple Store
             </a>
+
+        </div>
+        <div class="nav navbar-nav navbar-right">
+            <p><a href="/shopping-cart">Koszyk zakupowy <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span></a></p>
         </div>
     </div>
 </nav>
