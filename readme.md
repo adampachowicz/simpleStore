@@ -12,5 +12,10 @@ DB_PASSWORD=root
 zainstaluje composer zależności
 composer install
 
-aby włączyć aplikację wpisz w cli 
-sh run.sh
+aby uruchomic
+php artisan migrate
+php artisan serve
+
+opcjonalnie fakowa baza danych
+
+php artisan db:seed
