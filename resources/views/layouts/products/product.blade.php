@@ -17,7 +17,11 @@
                     <p>{{ $product->description }}</p>
                     <h6>Aktualny stan:</h6>
                     <hr>
-                    <a href="btn btn-success" class="btn btn-success">Dodaj produkt do koszyka</a>
+                    @if (isset($product->price->id))
+                        <a href="btn btn-suc cess" class="btn btn-success">Dodaj produkt do koszyka</a>
+                    @else
+                        <a href="#" class="btn btn-danger">Produkt chwilowo niedostępny</a>
+                    @endif
                 </div>
             </div>
         </div>

@@ -12,6 +12,9 @@ class ProductController extends Controller
     {
 
         $products = Product::paginate(4);
+       /* foreach($products as $product){
+            dd($product->price->price);
+        }*/
 
         return view('layouts/products/products', compact('products'));
     }
