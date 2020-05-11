@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    // one by one stock
+    
+    public function stock()
+    {
+        return $this->hasOne('App\Stock');
+    }
 
-    /// one by one price
     public function price()
     {
         return $this->hasOne('App\Price');

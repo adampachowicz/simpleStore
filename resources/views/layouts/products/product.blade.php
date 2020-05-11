@@ -15,9 +15,9 @@
                 <div class="card-body">
                     <h6>Opis</h6>
                     <p>{{ $product->description }}</p>
-                    <h6>Aktualny stan:</h6>
+                    <h6>Aktualny stan: @if (isset($product->stock->id)){{ $product->stock->quantity }} @else 0 @endif</h6>
                     <hr>
-                    @if (isset($product->price->id))
+                    @if (isset($product->price->id) && isset($product->stock->id))
                         <a href="btn btn-suc cess" class="btn btn-success">Dodaj produkt do koszyka</a>
                     @else
                         <a href="#" class="btn btn-danger">Produkt chwilowo niedostępny</a>
